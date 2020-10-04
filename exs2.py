@@ -1,10 +1,11 @@
-# Узнайте у пользователя число n. Найдите сумму чисел n + nn + nnn.
-# Например, пользователь ввёл число 3. Считаем 3 + 33 + 333 = 369.
+# Для списка реализовать обмен значений соседних элементов,
+# т.е. Значениями обмениваются элементы с индексами 0 и 1, 2 и 3 и т.д.
+# При нечетном количестве элементов последний сохранить на своем месте.
+# Для заполнения списка элементов необходимо использовать функцию input().
 
-input_num = input("Введите число n >>> ")
-num = int(input_num)
-double_num = int(input_num + input_num)
-tripple_num = int(input_num + input_num + input_num)
-summ = num + double_num + tripple_num
-print(f"Введенное число =", input_num, "\nОдинарное число =", num, "\nДвойное число =", double_num, "\nТройное число =",
-      tripple_num, "\nСумма всех трех чисел =", summ)
+list_input = list(input("Введи значения для списка элементов >>> "))
+i = 0
+for el in range(int(len(list_input)/2)):
+    list_input[i], list_input[i+1] = list_input[i+1], list_input[i]
+    i += 2
+print(list_input)
