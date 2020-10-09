@@ -1,11 +1,20 @@
-#  Пользователь вводит время в секундах.
-#  Переведите время в часы, минуты и секунды и выведите в формате чч:мм:сс.
-#  Используйте форматирование строк.
+#1. Создать список и заполнить его элементами различных типов данных.
+# Реализовать скрипт проверки типа данных каждого элемента.
+# Использовать функцию type() для проверки типа.
+# Элементы списка можно не запрашивать у пользователя, а указать явно, в программе
 
-user_seconds = int(input("Input some seconds >>> "))
+total_list = [
+    123,
+    10.5,
+    'string',
+    None,
+    [1,2,3],
+    ('a','b','c','d','e','f','j'),
+    True,
+    set('blablabla'),
+    dict(key_1='val_1', key_2='val_2'),
+    b'byteText'
+]
 
-hour = user_seconds // 3600
-minutes = user_seconds // 60 - (hour * 60)
-sec = user_seconds % 60
-
-print(f"input seconds =", user_seconds, "\nreformat time in HH:MM:SS =", hour, ":", minutes, ":", sec)
+for el in total_list:
+    print(type(el))
